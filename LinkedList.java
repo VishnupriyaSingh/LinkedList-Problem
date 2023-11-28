@@ -1,4 +1,4 @@
-public class LinkedList {
+class LinkedList {
     Node head;
 
     public void append(int data) {
@@ -13,6 +13,19 @@ public class LinkedList {
         }
 
         current.next = new Node(data);
+    }
+
+    public void insertAfter(int afterData, int newData) {
+        Node current = head;
+        while (current != null && current.data != afterData) {
+            current = current.next;
+        }
+
+        if (current != null) {
+            Node newNode = new Node(newData);
+            newNode.next = current.next;
+            current.next = newNode;
+        }
     }
 
     public void printList() {
