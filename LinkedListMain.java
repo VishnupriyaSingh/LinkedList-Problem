@@ -3,9 +3,10 @@ public class LinkedListMain {
         LinkedList list = new LinkedList();
 
         list.append(56);
+        list.append(30);
         list.append(70);
 
-        list.insertAfter(56, 30);
+        list.pop();
 
         list.printList(); 
     }

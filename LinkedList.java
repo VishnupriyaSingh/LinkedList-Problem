@@ -28,6 +28,12 @@ class LinkedList {
         }
     }
 
+    public void pop() {
+        if (head != null) {
+            head = head.next;
+        }
+    }
+
     public void printList() {
         Node current = head;
         while (current != null) {
