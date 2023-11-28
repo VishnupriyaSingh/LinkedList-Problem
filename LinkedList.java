@@ -48,6 +48,17 @@ class LinkedList {
         current.next = null;
     }
 
+    public boolean search(int value) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == value) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
     public void printList() {
         Node current = head;
         while (current != null) {
