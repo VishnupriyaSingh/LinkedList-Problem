@@ -59,6 +59,19 @@ class LinkedList {
         return false;
     }
 
+    public void insertAfterValue(int afterValue, int newValue) {
+        Node current = head;
+        while (current != null && current.data != afterValue) {
+            current = current.next;
+        }
+
+        if (current != null) {
+            Node newNode = new Node(newValue);
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+    }
+
     public void printList() {
         Node current = head;
         while (current != null) {

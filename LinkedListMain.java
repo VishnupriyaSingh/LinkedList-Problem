@@ -4,9 +4,10 @@ public class LinkedListMain {
         list.append(56);
         list.append(30);
         list.append(70);
+        list.printList();
 
-        System.out.println("Search for 30: " + list.search(30));
+        list.insertAfterValue(30, 40);
 
-        System.out.println("Search for 100: " + list.search(100));
+        list.printList();
     }
 }
